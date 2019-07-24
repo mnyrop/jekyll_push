@@ -6,10 +6,13 @@ module JekyllPush
     #
     class RainbowError < StandardError
       def initialize(msg = '')
-        super(Rainbow(msg).magenta)
+        super Rainbow(msg).magenta
       end
     end
 
-     class MissingBranch < RainbowError; end
+    class MissingBranch < RainbowError; end
+    class NoFilesBuilt  < RainbowError; end
+    class NoOrigin      < RainbowError; end
+    class SystemCall    < RainbowError; end
   end
 end
