@@ -13,4 +13,6 @@ require_relative 'jekyll_push/site'
 require_relative 'jekyll_push/travis'
 require_relative 'jekyll_push/utils'
 
-module JekyllPush ; end
+#
+#
+module JekyllPush; end

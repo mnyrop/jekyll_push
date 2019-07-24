@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 module JekyllPush
+  #
+  #
   class Branch
     attr_reader :target
 
     # @param target [String]  the name of the Git branch to deploy to
     # @param time   [String]  message with the time of deployment
-
     def initialize(target)
       @target = JekyllPush::Utils.slugify target
       @time   = Time.now.strftime('%H:%M on %Y-%m-%d')
@@ -18,7 +19,7 @@ module JekyllPush
       @origin = origin
       @msg    = msg
 
-      raise JekyllPush::Error::NoOrigin, "No remote origin was found for the project GitHub repository." if @origin.empty?
+      raise JekyllPush::Error::NoOrigin, 'No remote origin was found for the project GitHub repository.' if @origin.empty?
     end
 
     #

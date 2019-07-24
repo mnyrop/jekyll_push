@@ -1,3 +1,18 @@
+AllCops:
+  TargetRubyVersion: 2.4
+Layout/EmptyComment:
+  Enabled: false
 Metrics/LineLength:
   Exclude:
     - '*.gemspec'
+  IgnoredPatterns:
+    - 'raise'
+    - 'puts'
+    - 'warn'
+    - 'git'
+Style/DoubleNegation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 23
+Metrics/MethodLength:
+  Max: 15

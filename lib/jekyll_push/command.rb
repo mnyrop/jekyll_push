@@ -9,13 +9,13 @@ module JekyllPush
         prog.command(:push) do |c|
           c.syntax 'push [args]'
           c.description 'pushes compiled site to specified github branch'
-          c.action do |args, options|
+          c.action do |args, _options|
             raise Error::MissingBranch, "You must specify a target branch name after 'jekyll push'." if args.empty?
 
             site   = JekyllPush::Site.new
             branch = JekyllPush::Branch.new args.first
 
-            warn Rainbow('Warning: Building the site without a baseurl is not recommended if using GitHub pages.').yellow if site.baseurl.empty? and branch.target.eql? 'gh-pages'
+            warn Rainbow('Warning: Building the site without a baseurl is not recommended if using GitHub pages.').yellow if site.baseurl.empty? && branch.target == 'gh-pages'
 
             site.rebuild
             branch.push site.dir

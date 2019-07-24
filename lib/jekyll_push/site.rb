@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 module JekyllPush
@@ -26,14 +25,13 @@ module JekyllPush
       File.join `pwd`.strip, '_site'
     end
 
-
     # Rebuild the Jekyll site with @baseurl
     # @return [Nil]
     def rebuild
       FileUtils.rm_r @dir if File.directory? @dir
       opts = {
         destination: @dir,
-        baseurl:  @baseurl
+        baseurl: @baseurl
       }
       opts['source'] = @config.dig 'source_dir' if @config.key? 'source'
 
