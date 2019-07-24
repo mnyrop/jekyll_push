@@ -1,6 +1,13 @@
-require "jekyll_push/version"
+# frozen_string_literal: true
 
-module JekyllPush
-  class Error < StandardError; end
-  # Your code goes here...
-end
+# 3rd party
+require 'jekyll'
+require 'rainbow'
+
+# relative
+require_relative 'jekyll_push/branch'
+require_relative 'jekyll_push/command'
+require_relative 'jekyll_push/error'
+require_relative 'jekyll_push/site'
+
+module JekyllPush; end
