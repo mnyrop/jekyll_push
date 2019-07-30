@@ -9,19 +9,23 @@ __Jekyll gem plugin to push a compiled Jekyll site to a GitHub branch.__ Works l
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add `jekyll_push` to your Jekyll sites's Gemfile within the `:jekyll_plugins` group:
 
 ```ruby
-gem 'jekyll_push'
+group :jekyll_plugins do
+ gem 'jekyll_push'
+end
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll_push
+    
+Make sure you also add `jekyll_push` as a `plugin` to your `_config.yml` file:
+```yml
+plugins:
+ - jekyll_push
+```
 
 ## Usage
 
