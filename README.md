@@ -29,6 +29,8 @@ Or install it yourself as:
 
 ## Configuration
 
+### For GitHub pages
+
 If you run `jekyll push gh-pages` to use __GitHub pages publishing__, `JekyllPush` will look for a `repo_name` variable in your `_config.yml` file and try to construct a `baseurl` from it.
 
 For example, if you have a repository named `my_site` just add:
@@ -39,6 +41,13 @@ repo_name: my_site
 
 to your `_config.yml` file and `JekyllPush` will rebuild your site using `/my_site` as the `baseurl` before pushing it to the `gh-pages` branch. This lets you use `JekyllPush` for multiple branches and publish targets, with differing (base)url patterns.
 
+### When run locally
+
+[ TO DO ]
+
+### When run via Travis-CI
+
+[ TO DO ]
 
 ## Contributing
 
