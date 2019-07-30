@@ -35,7 +35,6 @@ module JekyllPush
       puts Rainbow("Rebuilding with baseurl '#{@baseurl}'").cyan
     end
 
-
     # Rebuild the Jekyll site with @baseurl
     # @return [Nil]
     def rebuild(target)
@@ -44,7 +43,7 @@ module JekyllPush
       FileUtils.rm_r @dir if File.directory? @dir
       opts = {
         destination: @dir,
-        baseurl: @baseurl,
+        baseurl: @baseurl
       }
       opts['source'] = @config.dig 'source_dir' if @config.key? 'source'
 
