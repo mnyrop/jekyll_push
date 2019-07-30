@@ -1,4 +1,4 @@
-# JekyllPush :octocat:
+# JekyllPush
 
 [![Build Status](https://travis-ci.org/mnyrop/jekyll_push.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll_push) [![Gem Version](https://badge.fury.io/rb/jekyll_push.svg)](https://badge.fury.io/rb/jekyll_push) [![Gem Downloads](https://img.shields.io/gem/dt/jekyll_push.svg?color=046d0b)](https://badge.fury.io/rb/jekyll_push) [![Maintainability](https://api.codeclimate.com/v1/badges/25dfeec93e298350ce50/maintainability)](https://codeclimate.com/github/mnyrop/jekyll_push/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/25dfeec93e298350ce50/test_coverage)](https://codeclimate.com/github/mnyrop/jekyll_push/test_coverage) [![docs](http://img.shields.io/badge/docs-rdoc.info-blue.svg?style=flat)](https://www.rubydoc.info/github/mnyrop/jekyll_push/)  ![License](https://img.shields.io/github/license/mnyrop/jekyll_push.svg?color=c6a1e0) 
 
