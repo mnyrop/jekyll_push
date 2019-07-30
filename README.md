@@ -1,7 +1,9 @@
 # JekyllPush [![Build Status](https://travis-ci.org/mnyrop/jekyll_push.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll_push) [![Gem Version](https://badge.fury.io/rb/jekyll_push.svg)](https://badge.fury.io/rb/jekyll_push) [![Gem Downloads](https://img.shields.io/gem/dt/jekyll_push.svg?color=046d0b)](https://badge.fury.io/rb/jekyll_push) [![docs](http://img.shields.io/badge/docs-rdoc.info-blue.svg?style=flat)](https://www.rubydoc.info/github/mnyrop/jekyll_push/)  ![License](https://img.shields.io/github/license/mnyrop/jekyll_push.svg?color=c6a1e0) 
 
-Jekyll gem plugin to push a compiled site to a GitHub branch. Works locally or on Travis CI if you add an access token.  
+__Jekyll gem plugin to push a compiled Jekyll site to a GitHub branch.__ Works locally or on Travis CI if you add an access token to your Travis build. Great for keeping archived copies or getting to use Jekyll Plugins and still host on GitHub pages.
 
+![push pop gif](https://media1.giphy.com/media/RI41Y0H0osVYQ/giphy.gif)
+ 
 
 ## Installation
 
