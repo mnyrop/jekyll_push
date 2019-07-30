@@ -7,7 +7,6 @@ ROOT    = `pwd`.strip
 SAMPLE  = "#{ROOT}/spec/sample_site"
 BUILD   = "#{ROOT}/test"
 
-# helper methods
 def quiet_stdout
   if QUIET
     begin

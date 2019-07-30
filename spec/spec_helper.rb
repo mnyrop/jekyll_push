@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 # run $ DEBUG=true bundle exec rspec for verbose output
 # run $ bundle exec rspec for sparse output
 QUIET = !ENV['DEBUG']
@@ -9,6 +8,6 @@ QUIET = !ENV['DEBUG']
 require 'setup'
 require 'simplecov'
 
-SimpleCov.start do add_filter 'spec' ; end
+SimpleCov.start { add_filter 'spec' }
 
 require 'jekyll_push'

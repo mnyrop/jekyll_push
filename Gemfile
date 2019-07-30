@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 # dev/test utilities
+gem 'minima', require: false
 gem 'rubocop', require: false
 gem 'simplecov', require: false
 gem 'yard', require: false
-gem 'minima', require: false

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe JekyllPush  do
+describe JekyllPush do
   before(:all) do
     Test.reset
   end
@@ -16,7 +16,7 @@ describe JekyllPush  do
       let(:path) { 'doesnt_exist.yml' }
 
       it 'raises JekyllPush::Error::InvalidConfig' do
-        expect{ JekyllPush.config_from_file path }.to raise_error JekyllPush::Error::InvalidConfig
+        expect { JekyllPush.config_from_file path }.to raise_error JekyllPush::Error::InvalidConfig
       end
     end
 
@@ -24,7 +24,7 @@ describe JekyllPush  do
       let(:path) { '_invalid_format_config.yml' }
 
       it 'raises JekyllPush::Error::InvalidConfig' do
-        expect{ JekyllPush.config_from_file path }.to raise_error JekyllPush::Error::InvalidConfig
+        expect { JekyllPush.config_from_file path }.to raise_error JekyllPush::Error::InvalidConfig
       end
     end
   end

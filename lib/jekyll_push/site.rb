@@ -12,7 +12,6 @@ module JekyllPush
       @baseurl  = @config.fetch :baseurl, ''
       @repo     = @config.fetch :repo_name, ''
       @dir      = site_dir
-
     rescue TypeError => e
       raise JekyllPush::Error::InvalidConfig, "An invalid (non-Hash) config was provided.\n#{e}"
     end
@@ -22,7 +21,9 @@ module JekyllPush
       File.join `pwd`.strip, '_site'
     end
 
-    # Use the repostory name as the baseurl when publishing to GitHub pages if available
+    # Use the repostory name as the baseurl when
+    # publishing to GitHub pages if available
+    #
     # @return [String]
     def gh_baseurl
       if @repo.empty?
