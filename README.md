@@ -1,5 +1,6 @@
-# JekyllPush
-Jekyll gem plugin to push a compiled site to a GitHub branch. Works locally or on Travis CI if you add an access token.
+# JekyllPush [![Build Status](https://travis-ci.org/mnyrop/jekyll_push.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll_push)
+Jekyll gem plugin to push a compiled site to a GitHub branch. Works locally or on Travis CI if you add an access token.  
+
 
 ## Installation
 
@@ -23,9 +24,15 @@ Or install it yourself as:
 
 ## Configuration
 
-If you run `jekyll push gh-pages` to use GitHub pages publishing, `JekyllPush` will look for a `repo_name` variable in your `_config.yml` file and try to construct a `baseurl` from it.
+If you run `jekyll push gh-pages` to use __GitHub pages publishing__, `JekyllPush` will look for a `repo_name` variable in your `_config.yml` file and try to construct a `baseurl` from it.
 
-For example, if you have a repository named `my_site` and you add `repo_name: my_site` to your `_config.yml`, `JekyllPush` will rebuild your site with the `baseurl` `/my_site` before pushing. This lets you use `JekyllPush` for multiple branches and publish targets, with differing (base)url patterns.
+For example, if you have a repository named `my_site` just add
+
+```yaml
+repo_name: my_site
+```
+
+to your `_config.yml` file and `JekyllPush` will rebuild your site using `/my_site` as the `baseurl` before pushing it to the `gh-pages` branch. This lets you use `JekyllPush` for multiple branches and publish targets, with differing (base)url patterns.
 
 
 ## Contributing
