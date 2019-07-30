@@ -6,8 +6,7 @@ module JekyllPush
   class Branch
     attr_reader :target
 
-    # @param target [String]  the name of the Git branch to deploy to
-    # @param time   [String]  message with the time of deployment
+    # @param target [String] the name of the Git branch to deploy to
     def initialize(target)
       @target = JekyllPush::Utils.slugify target
       @time   = Time.now.strftime('%H:%M on %Y-%m-%d')
@@ -23,25 +22,25 @@ module JekyllPush
     end
 
     #
-    #
+    # @return [Boolean]
     def on_travis?
       !!ENV.fetch('CI', false)
     end
 
     #
-    #
+    # @return [Boolean]
     def local?
       !on_travis?
     end
 
     #
-    #
+    # @return [Array]
     def git_commands
       ['git init && git add .', "git commit -m '#{@commit}'", "git remote add origin #{@origin}", "git push origin master:refs/heads/#{@target} --force"]
     end
 
     #
-    #
+    # @return [Nil]
     def push(dir)
       files = Dir.glob "#{dir}/**/*"
       raise JekyllPush::Error::NoFilesBuilt, "Found no files inside site directory '#{dir}' to push." if files.empty?
@@ -57,13 +56,13 @@ module JekyllPush
     end
 
     #
-    #
+    # @return [Nil]
     def pretty_list(items)
       items.each { |i| puts "\t+ #{i.strip}" }
     end
 
     #
-    #
+    # @return [Nil]
     def system_try(command)
       puts Rainbow("\nTrying `#{command}`").cyan
       success = system command

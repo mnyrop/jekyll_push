@@ -5,7 +5,7 @@ module JekyllPush
   #
   module Utils
     #
-    #
+    # @return [String]
     def self.slugify(str)
       safe = str.to_s.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
       warn Rainbow("Warning: '#{str}' is not an acceptable branch name. Using '#{safe}' instead.").orange unless safe.eql?(str)
