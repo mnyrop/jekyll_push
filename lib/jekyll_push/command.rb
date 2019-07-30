@@ -15,9 +15,7 @@ module JekyllPush
             site   = JekyllPush::Site.new
             branch = JekyllPush::Branch.new args.first
 
-            warn Rainbow('Warning: Building the site without a baseurl is not recommended if using GitHub pages.').yellow if site.baseurl.empty? && branch.target == 'gh-pages'
-
-            site.rebuild
+            site.rebuild branch.target
             branch.push site.dir
 
             puts Rainbow("\nDone ✓").green
