@@ -3,4 +3,8 @@
 source 'https://rubygems.org'
 gemspec
 
-gem 'rubocop'
+# dev/test utilities
+gem 'rubocop', require: false
+gem 'simplecov', require: false
+gem 'yard', require: false
+gem 'minima', require: false

@@ -9,16 +9,10 @@ module JekyllPush
         prog.command(:push) do |c|
           c.syntax 'push [args]'
           c.description 'pushes compiled site to specified github branch'
-          c.action do |args, _options|
+          c.action do |args, _opts|
             raise Error::MissingBranch, "You must specify a target branch name after 'jekyll push'." if args.empty?
 
-            site   = JekyllPush::Site.new
-            branch = JekyllPush::Branch.new args.first
-
-            site.rebuild branch.target
-            branch.push site.dir
-
-            puts Rainbow("\nDone ✓").green
+            args.each { |a| JekyllPush.run_command a }
           end
         end
       end

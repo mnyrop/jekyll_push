@@ -15,4 +15,30 @@ require_relative 'jekyll_push/utils'
 
 #
 #
-module JekyllPush; end
+module JekyllPush
+  #
+  # @return [Nil]
+  def self.run_command(arg)
+    site   = JekyllPush::Site.new
+    branch = JekyllPush::Branch.new arg
+
+    site.rebuild branch.target
+    branch.push site.dir
+
+    puts Rainbow("\nDone ✓").green
+  end
+
+  #
+  # @return [String]
+  def self.config_path
+    "#{`pwd`.strip}/_config.yml"
+  end
+
+  #
+  # @return [Hash]
+  def self.config_from_file(path = config_path)
+    YAML.load_file path
+  rescue StandardError => e
+    raise JekyllPush::Error::InvalidConfig, "Could not load config file from path '#{path}'\n#{e}"
+  end
+end
