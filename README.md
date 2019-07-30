@@ -27,7 +27,7 @@ Or install it yourself as:
 
 If you run `jekyll push gh-pages` to use __GitHub pages publishing__, `JekyllPush` will look for a `repo_name` variable in your `_config.yml` file and try to construct a `baseurl` from it.
 
-For example, if you have a repository named `my_site` just add
+For example, if you have a repository named `my_site` just add:
 
 ```yaml
 repo_name: my_site
