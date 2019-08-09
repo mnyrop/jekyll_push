@@ -5,7 +5,7 @@ describe JekyllPush::Branch do
   let(:target) { 'test_branch' }
   let(:local_branch) do
     ENV['CI'] = nil
-    JekyllPush::Branch.new target
+    JekyllPush::Branch.new target, {}
   end
 
   describe '#new' do

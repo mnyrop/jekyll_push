@@ -18,9 +18,9 @@ require_relative 'jekyll_push/utils'
 module JekyllPush
   #
   # @return [Nil]
-  def self.run_command(arg)
+  def self.run_command(arg, opts)
     site   = JekyllPush::Site.new
-    branch = JekyllPush::Branch.new arg
+    branch = JekyllPush::Branch.new arg, opts
 
     site.rebuild branch.target
     branch.push site.dir

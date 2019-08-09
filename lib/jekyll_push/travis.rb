@@ -12,10 +12,10 @@ module JekyllPush
 
     #
     # @return [String]
-    def origin
+    def origin(opts)
       @repo_slug = ENV['TRAVIS_REPO_SLUG']
-      @user      = @repo_slug.split('/').first
-      @token     = ENV['ACCESS_TOKEN']
+      @user      = opts.fetch :user, @repo_slug.split('/').first
+      @token     = opts.fetch :pw, ENV['ACCESS_TOKEN']
 
       "https://#{@user}:#{@token}@github.com/#{@repo_slug}.git"
     end

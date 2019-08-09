@@ -12,7 +12,7 @@ module JekyllPush
 
     #
     # @return [String]
-    def origin
+    def origin(_opts)
       `git config --get remote.origin.url`.strip
     end
 
